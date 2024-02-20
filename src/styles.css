@@ -13,6 +13,7 @@ html, body {
     background: linear-gradient(#FFF 35%, #E6B596);
     height: 100%;
     max-width: 340px;
+    min-width: 270px;
     width: 25%;
 }
 
@@ -30,7 +31,6 @@ html, body {
 
 .navigation__element {
     color: #382118;
-    cursor: pointer;
     font-size: 1.5rem;
     margin-top: 1rem;
     transition: font-weight 0.3s ease;
@@ -38,6 +38,19 @@ html, body {
 
 .navigation__element:hover {
     font-weight: 700;
+}
+
+.navigation__radio {
+    display: none;
+}
+
+.navigation__radio:checked ~ label {
+    color: #D28E94;
+    font-weight: 700;
+}
+
+.navigation__label {
+    cursor: pointer;
 }
 
 .contact-info {
@@ -60,12 +73,31 @@ html, body {
     margin-top: 3rem;
 }
 
+.social-media__facebook {
+    transition: color .2s ease;
+}
+
+.social-media__facebook:hover {
+    color: #D28E94;
+}
+
 footer {
     background: #E6B596;
     bottom: 0;
+    display: flex;
     height: 15%;
-    margin-left: min(25%, 340px);
+    justify-content: center;
+    margin-left: clamp(270px, 25%, 340px);
     min-height: 150px;
     position: fixed;
     width: 100%;
+}
+
+.footer-title {
+    color: #382118;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    letter-spacing: 2px;
 }
