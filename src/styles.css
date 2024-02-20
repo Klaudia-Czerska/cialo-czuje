@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: Inter, sans-serif;
+    height: 100%;
+}
+
+.sidebar {
+    background: linear-gradient(#FFF 35%, #E6B596);
+    height: 100%;
+    max-width: 340px;
+    width: 25%;
+}
+
+.logo {
+    width: 100%;
+}
+
+.navigation {
+    margin: 3rem 3rem;
+}
+
+.navigation__list {
+    list-style: none;
+}
+
+.navigation__element {
+    color: #382118;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-info {
+    margin-left: 2rem;
+}
+
+.contact-info__phone {
+    color: #382118;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background: #E6B596;
+    bottom: 0;
+    height: 15%;
+    margin-left: min(25%, 340px);
+    min-height: 150px;
+    position: fixed;
+    width: 100%;
+}
