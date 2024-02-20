@@ -33,17 +33,31 @@ html, body {
     cursor: pointer;
     font-size: 1.5rem;
     margin-top: 1rem;
+    transition: font-weight 0.3s ease;
+}
+
+.navigation__element:hover {
+    font-weight: 700;
 }
 
 .contact-info {
+    color: #382118;
     margin-left: 2rem;
 }
 
 .contact-info__phone {
-    color: #382118;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+
+.social-media {
+    color: #382118;
+    cursor: pointer;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
 }
 
 footer {
