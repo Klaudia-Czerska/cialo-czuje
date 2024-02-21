@@ -7,14 +7,14 @@
 html, body {
     font-family: Inter, sans-serif;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .sidebar {
     background: linear-gradient(#FFF 35%, #E6B596);
     height: 100%;
-    max-width: 340px;
-    min-width: 270px;
-    width: 25%;
+    position: fixed;
+    width: 340px;
 }
 
 .logo {
@@ -81,6 +81,20 @@ html, body {
     color: #D28E94;
 }
 
+.start {
+    margin-left: clamp(270px, 25%, 340px);
+    position: absolute;
+    top: 0;
+    width: calc(100% - 340px);
+}
+
+.start__1,
+.start__2,
+.start__3,
+.start__4 {
+    width: 100%;
+}
+
 footer {
     background: #E6B596;
     bottom: 0;
@@ -90,7 +104,7 @@ footer {
     margin-left: clamp(270px, 25%, 340px);
     min-height: 150px;
     position: fixed;
-    width: 100%;
+    width: calc(100% - 340px);
 }
 
 .footer-title {
