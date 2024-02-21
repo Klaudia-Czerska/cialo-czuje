@@ -92,7 +92,29 @@ html, body {
 .start__2,
 .start__3,
 .start__4 {
+    position: absolute;
+    top: -8rem;
     width: 100%;
+}
+
+.start__1 {
+    animation: pic 15s linear infinite;
+    opacity: 1;
+}
+
+.start__2 {
+    animation: pic 15s linear 5s infinite;
+    opacity: 0;
+}
+
+.start__3 {
+    animation: pic 15s linear 10s infinite;
+    opacity: 0;
+}
+
+.start__4 {
+    animation: pic 15s linear 15s infinite;
+    opacity: 0;
 }
 
 footer {
@@ -114,4 +136,26 @@ footer {
     margin-right: 10rem;
     margin-top: 2rem;
     letter-spacing: 2px;
+}
+
+@keyframes pic {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
