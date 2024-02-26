@@ -21,6 +21,15 @@ body {
     grid-area: sidebar;
 }
 
+.sidebar__mobile-menu {
+    color: #382118;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: absolute;
+    visibility: hidden;
+}
+
 .logo {
     width: 100%;
 }
@@ -182,4 +191,11 @@ footer {
         background: no-repeat url('../assets/22.webp') center/cover;
     }
 
+}
+
+@media screen and (width < 600px) {
+
+    .sidebar__mobile-menu {
+        visibility: visible;
+    }
 }
