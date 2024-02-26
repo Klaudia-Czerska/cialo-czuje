@@ -1,3 +1,5 @@
+// navigation for website
+
 const NAV = document.querySelectorAll('.navigation-radio');
 
 NAV.forEach(button => {

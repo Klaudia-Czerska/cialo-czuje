@@ -10,11 +10,15 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    display: grid;
+    grid-template: "sidebar main" 4fr
+                   "sidebar footer" 1fr / 1fr 4fr;
+}
+
 .sidebar {
     background: linear-gradient(#FFF 35%, #E6B596);
-    height: 100%;
-    position: fixed;
-    width: 340px;
+    grid-area: sidebar;
 }
 
 .logo {
@@ -81,52 +85,22 @@ html, body {
     color: #D28E94;
 }
 
+main {
+    grid-area: main;
+}
+
 .start {
-    margin-left: clamp(270px, 25%, 340px);
-    position: absolute;
-    top: 0;
-    width: calc(100% - 340px);
-}
-
-.start__1,
-.start__2,
-.start__3,
-.start__4 {
-    position: absolute;
-    top: -8rem;
-    width: 100%;
-}
-
-.start__1 {
-    animation: pic 15s linear infinite;
-    opacity: 1;
-}
-
-.start__2 {
-    animation: pic 15s linear 5s infinite;
-    opacity: 0;
-}
-
-.start__3 {
-    animation: pic 15s linear 10s infinite;
-    opacity: 0;
-}
-
-.start__4 {
-    animation: pic 15s linear 15s infinite;
-    opacity: 0;
+    animation: change-background 30s infinite ease;
+    background: no-repeat url('../assets/22.webp') center/cover;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 footer {
     background: #E6B596;
-    bottom: 0;
     display: flex;
-    height: 15%;
+    grid-area: footer;
     justify-content: center;
-    margin-left: clamp(270px, 25%, 340px);
-    min-height: 150px;
-    position: fixed;
-    width: calc(100% - 340px);
 }
 
 .footer-title {
@@ -138,24 +112,37 @@ footer {
     letter-spacing: 2px;
 }
 
-@keyframes pic {
+@keyframes change-background {
     0% {
-        opacity: 0;
+        background: no-repeat url('../assets/22.webp') center/cover;
     }
 
-    5% {
-        opacity: 1;
+    10% {
+        background: no-repeat url('../assets/22.webp') center/cover;
     }
 
-    70% {
-        opacity: 1;
+    16% {
+        background: no-repeat url('../assets/33.webp') center/cover;
     }
 
-    85% {
-        opacity: 0;
+    46% {
+        background: no-repeat url('../assets/33.webp') center/cover;
+    }
+
+    52% {
+        background: no-repeat url('../assets/39.webp') center/cover;
+    }
+
+    80% {
+        background: no-repeat url('../assets/39.webp') center/cover;
+    }
+
+    86% {
+        background: no-repeat url('../assets/22.webp') center/cover;
     }
 
     100% {
-        opacity: 0;
+        background: no-repeat url('../assets/22.webp') center/cover;
     }
+
 }
