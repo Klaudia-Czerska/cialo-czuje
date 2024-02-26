@@ -12,7 +12,7 @@ html, body {
 
 body {
     display: grid;
-    grid-template: "sidebar main" 4fr
+    grid-template: "sidebar main" auto
                    "sidebar footer" 1fr / 1fr 4fr;
 }
 
@@ -92,8 +92,43 @@ main {
 .start {
     animation: change-background 30s infinite ease;
     background: no-repeat url('../assets/22.webp') center/cover;
-    min-height: 100%;
+    min-height: 80svh;
     min-width: 100%;
+}
+
+.about-me {
+    display: none;
+    gap: 3rem;
+    grid-template-columns: 2fr 3fr;
+    min-height: 80svh;
+    padding: 2rem;
+}
+
+.about-me__titles-and-photo {
+    margin-left: 2rem;
+    width: 80%;
+}
+
+.about-me__subtitle {
+    margin-top: 3rem;
+}
+
+.about-me__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.about-me__portrait {
+    border: 10px solid #d28e947a;
+    width: min(300px, 100%);
+}
+
+.about-me__text {
+    margin-right: min(5%, 5rem);
+    margin-top: 8rem;
+    text-align: justify;
 }
 
 footer {
@@ -101,6 +136,7 @@ footer {
     display: flex;
     grid-area: footer;
     justify-content: center;
+    min-height: 180px;
 }
 
 .footer-title {
