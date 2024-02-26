@@ -78,6 +78,7 @@ body {
 }
 
 .social-media__facebook {
+    color: inherit;
     transition: color .2s ease;
 }
 
