@@ -142,6 +142,33 @@ main {
     text-align: justify;
 }
 
+.gallery {
+    display: none;
+    padding: 2rem;
+}
+
+.gallery__subtitle {
+    margin-top: 3rem;
+}
+
+.gallery__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.gallery__images {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery__image {
+    border: 10px solid #d28e947a;
+    width: clamp(100px, 100%, 400px);
+}
+
 footer {
     background: #E6B596;
     display: flex;
@@ -227,6 +254,10 @@ footer {
 
     .about-me__text {
         margin-top: 1rem;
+    }
+
+    .gallery__images {
+        grid-template-columns: 1fr;
     }
 
     @keyframes show-sidebar {
