@@ -226,6 +226,7 @@ footer {
     body {
         grid-template: "main" auto
                        "footer" 1fr / 1fr;
+        height: 100svh;
     }
 
     .sidebar__mobile-menu {
