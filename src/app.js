@@ -6,7 +6,6 @@ const main = document.querySelectorAll('main section');
 
 NAV.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.checked)
         main.forEach((section) => {
             section.style.display = 'none'
         })
@@ -14,3 +13,35 @@ NAV.forEach((button) => {
         section.style.display = 'grid';
     })
 })
+
+// showing sidebar on mobile
+
+const menuButton = document.querySelector('.sidebar__mobile-menu');
+const sidebar = document.querySelector('.sidebar');
+const mainContent = document.querySelector('main');
+const footer = document.querySelector('footer');
+
+
+const toggleMobileSidebar = () => {
+    if (window.getComputedStyle(sidebar).getPropertyValue('left') === '-600px') {
+        sidebar.classList.remove('hide-sidebar');
+        sidebar.classList.add('show-sidebar');
+    } else if (window.getComputedStyle(sidebar).getPropertyValue('left') === '0px') {
+        sidebar.classList.remove('show-sidebar');
+        sidebar.classList.add('hide-sidebar');
+    }
+}
+
+menuButton.addEventListener('click', toggleMobileSidebar);
+
+// allowing hiding sidebar when clicked elsewhere
+
+const hideMobileSidebar = () => {
+    if (window.getComputedStyle(sidebar).getPropertyValue('left') === '0px') {
+        sidebar.classList.remove('show-sidebar');
+        sidebar.classList.add('hide-sidebar');
+    }
+}
+
+mainContent.addEventListener('click', hideMobileSidebar);
+footer.addEventListener('click', hideMobileSidebar);

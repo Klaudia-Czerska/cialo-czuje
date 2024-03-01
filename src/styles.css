@@ -68,13 +68,14 @@ body {
 
 .contact-info {
     color: #382118;
+    display: grid;
+    gap: 0.5rem;
     margin-left: 2rem;
 }
 
 .contact-info__phone {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
 }
 
 .social-media {
@@ -195,7 +196,56 @@ footer {
 
 @media screen and (width < 600px) {
 
+    body {
+        grid-template: "main" auto
+                       "footer" 1fr / 1fr;
+    }
+
     .sidebar__mobile-menu {
+        cursor: pointer;
         visibility: visible;
+    }
+
+    .sidebar {
+        left: -600px;
+        min-height: 100svh;
+        position: absolute;
+        width: 270px;
+    }
+
+    .show-sidebar {
+        animation: show-sidebar 1s ease forwards;
+    }
+
+    .hide-sidebar {
+        animation: hide-sidebar 1s ease forwards;
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me__text {
+        margin-top: 1rem;
+    }
+
+    @keyframes show-sidebar {
+        0% {
+            left: -600px;
+        }
+
+        100% {
+            left: 0px;
+        }
+    }
+
+    @keyframes hide-sidebar {
+        0% {
+            left: 0px;
+        }
+
+        100% {
+            left: -600px;
+        }
     }
 }
