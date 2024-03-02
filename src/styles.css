@@ -35,11 +35,11 @@ body {
 }
 
 .navigation {
-    margin: 3rem 3rem;
+    margin: 3rem 3.5rem;
 }
 
 .navigation__list {
-    list-style: none;
+    list-style: url('../assets/Vector\ 7.png')''
 }
 
 .navigation__element {
@@ -181,9 +181,9 @@ footer {
     color: #382118;
     font-size: 1rem;
     font-weight: 400;
-    margin-right: 10rem;
     margin-top: 2rem;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 @keyframes change-background {
@@ -246,6 +246,17 @@ footer {
 
     .hide-sidebar {
         animation: hide-sidebar 1s ease forwards;
+    }
+
+    .logo {
+        margin-bottom: 2rem;
+        position: relative;
+        float: right;
+        width: 80%;
+    }
+
+    .contact-info__phone {
+        font-size: 1.2rem;
     }
 
     .about-me {
