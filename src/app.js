@@ -1,19 +1,3 @@
-// navigation for website
-
-const NAV = document.querySelectorAll('.navigation__element input');
-
-const main = document.querySelectorAll('main section');
-
-NAV.forEach((button) => {
-    button.addEventListener('click', () => {
-        main.forEach((section) => {
-            section.style.display = 'none'
-        })
-        const section = document.querySelector(`.${button.id}`);
-        section.style.display = 'grid';
-    })
-})
-
 // showing sidebar on mobile
 
 const menuButton = document.querySelector('.sidebar__mobile-menu');
@@ -45,3 +29,23 @@ const hideMobileSidebar = () => {
 
 mainContent.addEventListener('click', hideMobileSidebar);
 footer.addEventListener('click', hideMobileSidebar);
+
+// navigation for website
+
+const NAV = document.querySelectorAll('.navigation__element input');
+
+const main = document.querySelectorAll('main section');
+
+NAV.forEach((button) => {
+    button.addEventListener('click', () => {
+        main.forEach((section) => {
+            section.style.display = 'none'
+        })
+        const section = document.querySelector(`.${button.id}`);
+        section.style.display = 'grid';
+        if (window.innerWidth < 600) {
+            hideMobileSidebar();
+        }
+    })
+})
+
