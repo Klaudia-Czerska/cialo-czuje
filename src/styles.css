@@ -98,11 +98,14 @@ body {
 
 main {
     grid-area: main;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
-.start {
+.start__banner {
     animation: change-background 30s infinite ease;
     background: no-repeat url('../assets/22.webp') center/cover;
+    height: 100%;
     min-height: 80svh;
     min-width: 100%;
 }
@@ -174,7 +177,7 @@ footer {
     display: flex;
     grid-area: footer;
     justify-content: center;
-    min-height: 180px;
+    min-height: 195px;
 }
 
 .footer-title {
