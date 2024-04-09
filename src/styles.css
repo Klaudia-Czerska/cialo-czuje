@@ -110,6 +110,36 @@ main {
     min-width: 100%;
 }
 
+.start__text {
+    display: grid;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+.start__text h1 {
+    color: #382118;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.start__text h2 {
+    color: #382118;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.start__text div {
+    display: grid;
+    gap: 1rem;
+}
+
+.start__text ul,
+.start__text ol {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 .about-me {
     display: none;
     gap: 3rem;
