@@ -103,11 +103,35 @@ main {
 }
 
 .start__banner {
-    animation: change-background 30s infinite ease;
-    background: no-repeat url('../assets/22.webp') center/cover;
+    display: block;
     height: 100%;
     min-height: 80svh;
     min-width: 100%;
+    position: relative;
+}
+
+.start__banner div {
+    position: absolute;
+    min-height: 80svh;
+    min-width: 100%;
+}
+
+.start__banner-img1 {
+    animation: change-background 30s ease infinite forwards;
+    background: no-repeat url('../assets/22.webp') center/cover;
+    opacity: 1;
+}
+
+.start__banner-img2 {
+    animation: change-background 30s ease 10s infinite forwards;
+    background: no-repeat url('../assets/33.webp') center/cover;
+    opacity: 0;
+}
+
+.start__banner-img3 {
+    animation: change-background 30s ease 20s infinite forwards;
+    background: no-repeat url('../assets/39.webp') center/cover;
+    opacity: 0;
 }
 
 .start__text {
@@ -221,35 +245,23 @@ footer {
 
 @keyframes change-background {
     0% {
-        background: no-repeat url('../assets/22.webp') center/cover;
+        opacity: 0;
     }
 
-    10% {
-        background: no-repeat url('../assets/22.webp') center/cover;
+    6% {
+        opacity: 1;
     }
 
-    16% {
-        background: no-repeat url('../assets/33.webp') center/cover;
+    33% {
+        opacity: 1;
     }
 
-    46% {
-        background: no-repeat url('../assets/33.webp') center/cover;
-    }
-
-    52% {
-        background: no-repeat url('../assets/39.webp') center/cover;
-    }
-
-    80% {
-        background: no-repeat url('../assets/39.webp') center/cover;
-    }
-
-    86% {
-        background: no-repeat url('../assets/22.webp') center/cover;
+    40% {
+        opacity: 0;
     }
 
     100% {
-        background: no-repeat url('../assets/22.webp') center/cover;
+        opacity: 0;
     }
 
 }
