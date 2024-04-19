@@ -13,7 +13,7 @@ html, body {
 body {
     display: grid;
     grid-template: "sidebar main" auto
-                   "sidebar footer" 1fr / 1fr 4fr;
+                   "sidebar footer" 100px / 1fr 4fr;
 }
 
 .sidebar {
@@ -85,16 +85,21 @@ body {
     cursor: pointer;
     display: flex;
     font-size: 2rem;
+    gap: 2rem;
     justify-content: center;
     margin-top: 3rem;
 }
 
-.social-media__facebook {
+.social-media__facebook,
+.social-media__instagram,
+.social-media__whatsapp {
     color: inherit;
     transition: color .2s ease;
 }
 
-.social-media__facebook:hover {
+.social-media__facebook:hover,
+.social-media__instagram:hover,
+.social-media__whatsapp:hover {
     color: #D28E94;
 }
 
@@ -104,17 +109,22 @@ main {
     scrollbar-width: thin;
 }
 
+.start {
+    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    padding-bottom: 5rem;
+}
+
 .start__banner {
     display: block;
     height: 100%;
-    min-height: 80svh;
+    min-height: 90svh;
     min-width: 100%;
     position: relative;
 }
 
 .start__banner div {
     position: absolute;
-    min-height: 80svh;
+    min-height: 90svh;
     min-width: 100%;
 }
 
@@ -137,6 +147,7 @@ main {
 }
 
 .start__text {
+    color: #382118;
     display: grid;
     gap: 3rem;
     margin: 4rem;
@@ -153,6 +164,7 @@ main {
     color: #382118;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .start__text div {
@@ -160,17 +172,40 @@ main {
     gap: 1rem;
 }
 
-.start__text ul,
-.start__text ol {
-    display: grid;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+.start__massages-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Birthstone Bounce';
+    font-size: 2rem;
+    font-weight: 500;
+    gap: 2rem;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 2rem auto;
+}
+
+.start__massages-list-item {
+    border: solid 1px #D28E94;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+}
+
+.start__massages-list-item:hover {
+    background-color: #D28E94;
+    color: #FFF;
+    cursor: pointer;
 }
 
 .about-me {
+    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
     display: none;
     gap: 3rem;
     grid-template-columns: 2fr 3fr;
+    height: 100%;
     min-height: 80svh;
     padding: 2rem;
 }
@@ -197,9 +232,7 @@ main {
 }
 
 .about-me__text {
-    margin-left: 2rem;
-    margin-right: min(5%, 5rem);
-    margin-top: 8rem;
+    margin: 8rem min(5%, 5rem) 2rem 2rem;
     text-align: justify;
 }
 
@@ -236,7 +269,7 @@ footer {
     display: flex;
     grid-area: footer;
     justify-content: center;
-    min-height: 195px;
+    min-height: 100px;
 }
 
 .footer-title {
