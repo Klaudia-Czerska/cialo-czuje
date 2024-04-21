@@ -205,8 +205,8 @@ main {
     display: none;
     gap: 3rem;
     grid-template-columns: 2fr 3fr;
-    height: 100%;
-    min-height: 80svh;
+    height: fit-content;
+    min-height: 100%;
     padding: 2rem;
 }
 
@@ -266,11 +266,12 @@ main {
 
 .massages {
     background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
-    display: flex;
+    display: none;
     gap: 1rem;
     height: fit-content;
     justify-content: space-between;
-    padding: 2rem;
+    justify-items: center;
+    padding: 2rem 2rem 2rem 4rem;
     text-align: center;
 }
 
@@ -281,7 +282,6 @@ main {
 .massages__title {
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 3rem;
     margin-top: 1rem;
 }
 
@@ -289,10 +289,12 @@ main {
     font-family: 'Birthstone Bounce';
     font-size: 2rem;
     font-weight: 400;
+    margin-top: 2rem;
 }
 
 .massages__info {
-    margin: 1rem 3rem;
+    align-self: center;
+    max-width: 700px;
 }
 
 .massages ul {
@@ -302,11 +304,19 @@ main {
 }
 
 .massages__footer {
+    align-items: center;
     display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .massages__prices {
     min-width: 30%;
+}
+
+.massages__preparation {
+    width: 70%;
 }
 
 footer {
@@ -397,6 +407,10 @@ footer {
 
     .gallery__images {
         grid-template-columns: 1fr;
+    }
+
+    .massages__footer {
+        flex-wrap: wrap;
     }
 
     @keyframes show-sidebar {
