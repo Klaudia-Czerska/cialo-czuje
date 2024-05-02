@@ -387,6 +387,10 @@ main {
     width: 70%;
 }
 
+.contact {
+    display: none;
+}
+
 footer {
     background: #E6B596;
     display: flex;
