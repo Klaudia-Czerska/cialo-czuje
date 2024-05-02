@@ -208,6 +208,53 @@ main {
     color: #FFF;
 }
 
+.start__holistic {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-items: center;
+}
+
+.start__holistic-info {
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.start__holistic-image {
+    border: 10px solid #d28e947a;
+    width: min(800px, 100%);
+}
+
+.start__preparation {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+}
+
+.start__preparation-info {
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.start__preparation-image {
+    border: 10px solid #d28e947a;
+    width: min(800px, 100%);
+}
+
+.start__products {
+    display: grid;
+    place-items: center;
+}
+
+.start__products-image {
+    border: 10px solid #d28e947a;
+    margin-top: 1rem;
+    width: min(800px, 100%);
+}
+
 .about-me {
     background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
     display: none;
@@ -267,9 +314,20 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.gallery__images-column {
+    display: grid;
+    gap: 1rem;
+}
+
 .gallery__image {
     border: 10px solid #d28e947a;
+    transition: border 0.3s ease;
     width: clamp(100px, 100%, 400px);
+}
+
+.gallery__image:hover {
+    border: 10px solid #E6B596;
+    cursor: pointer;
 }
 
 .massages {
@@ -409,6 +467,11 @@ footer {
 
     .start__banner-img4 {
         background: no-repeat url('../assets/51-mobile.jpg') center/cover;
+    }
+
+    .start__holistic,
+    .start__preparation {
+        grid-template-columns: 1fr;
     }
 
     .about-me {
