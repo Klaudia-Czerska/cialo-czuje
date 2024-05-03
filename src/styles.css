@@ -208,6 +208,26 @@ main {
     color: #FFF;
 }
 
+.start__expectations-info {
+    align-items: center;
+    gap: 0;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+}
+
+.start__expectations-list {
+    margin-left: 1rem;
+}
+
+.start__expectations-video {
+    border: 10px solid #d28e947a;
+    width: min(800px, 100%);
+}
+
+.start__expectations-adnotation {
+    grid-column: 1 / span 2;
+}
+
 .start__holistic {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -509,10 +529,27 @@ footer {
         background: no-repeat url('../assets/51-mobile.jpg') center/cover;
     }
 
+    .start__expectations,
     .start__holistic,
     .start__preparation,
     .start__vouchers {
         grid-template-columns: 1fr;
+    }
+
+    .start__expectations div {
+        display: block;
+    }
+
+    .start__expectations-list {
+        margin-bottom: 1rem;
+    }
+
+    .start__expectations-adnotation p {
+        margin-bottom: 1rem;
+    }
+
+    .start__expectations-video {
+        width: 100%;
     }
 
     .about-me {
