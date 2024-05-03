@@ -515,7 +515,7 @@ footer {
     }
 }
 
-@media screen and (height < 700px) {
+@media screen and (height < 800px) and (orientation: landscape) {
 
     .navigation {
         margin: 1rem 0.5rem;
