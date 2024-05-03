@@ -306,8 +306,7 @@ main {
 .gallery {
     background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
     display: none;
-    margin-left: 2rem;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 4rem;
 }
 
 .gallery__subtitle {
@@ -511,7 +510,8 @@ footer {
     }
 
     .start__holistic,
-    .start__preparation {
+    .start__preparation,
+    .start__vouchers {
         grid-template-columns: 1fr;
     }
 
@@ -529,6 +529,11 @@ footer {
 
     .massages__footer {
         flex-wrap: wrap;
+    }
+
+    .contact__map {
+        margin: 2rem 0;
+        width: 100%;
     }
 
     @keyframes show-sidebar {
