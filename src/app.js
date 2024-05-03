@@ -40,6 +40,7 @@ NAV.forEach((button) => {
     button.addEventListener('click', () => {
         main.forEach((section) => {
             section.style.display = 'none'
+            section.scrollTo(top);
         })
         const section = document.querySelector(`.${button.id}`);
         section.style.display = 'grid';
