@@ -244,6 +244,18 @@ main {
     width: min(800px, 100%);
 }
 
+.start__vouchers {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+}
+
+.start__vouchers-image {
+    border: 10px solid #d28e947a;
+    margin-top: 1rem;
+    width: min(400px, 100%);
+}
+
 .start__products {
     display: grid;
     place-items: center;
@@ -292,6 +304,7 @@ main {
 }
 
 .gallery {
+    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
     display: none;
     margin-left: 2rem;
     padding: 2rem;
@@ -388,7 +401,31 @@ main {
 }
 
 .contact {
+    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
     display: none;
+    height: fit-content;
+    min-height: 100%;
+    padding: 2rem;
+}
+
+.contact__subtitle {
+    margin-top: 3rem;
+}
+
+.contact__title {
+    color: #382118;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.contact__info {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact__info i {
+    margin-right: 1rem;
 }
 
 footer {
