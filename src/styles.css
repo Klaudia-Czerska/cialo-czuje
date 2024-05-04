@@ -415,6 +415,15 @@ main {
     min-width: 30%;
 }
 
+.massages__prices li {
+    border: solid 1px #D28E94;
+    padding: 0.5rem;
+}
+
+.massages__price {
+    margin-top: 0.5rem;
+}
+
 .massages__preparation {
     width: 70%;
 }
@@ -424,7 +433,7 @@ main {
     display: none;
     height: fit-content;
     min-height: 100%;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 4rem;
 }
 
 .contact__subtitle {
@@ -445,6 +454,16 @@ main {
 
 .contact__info i {
     margin-right: 1rem;
+}
+
+.contact__social-media {
+    color: #D28E94;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact__social-media:hover {
+    color: #E6B596;
 }
 
 footer {
