@@ -211,7 +211,7 @@ main {
 .start__expectations-info {
     align-items: center;
     gap: 0;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
 
@@ -221,7 +221,7 @@ main {
 
 .start__expectations-video {
     border: 10px solid #d28e947a;
-    width: min(800px, 100%);
+    width: min(500px, 100%);
 }
 
 .start__expectations-adnotation {
