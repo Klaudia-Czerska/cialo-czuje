@@ -617,7 +617,7 @@ footer {
 
     body {
         grid-template: "sidebar main" auto
-                       "sidebar footer" 100px / 1fr 7fr;
+                       "sidebar footer" 70px / 1fr 7fr;
     }
 
     .navigation {
@@ -639,11 +639,32 @@ footer {
     .social-media {
         margin: 1rem;
     }
+
+    footer {
+        min-height: 70px;
+    }
+
+    .footer-title {
+        margin-top: 1.5rem;
+    }
 }
 
 @media screen and (width < 1300px) {
 
     .contact-info__phone {
         font-size: 1.3rem;
+    }
+}
+
+@media screen and (height < 550px) and (orientation: landscape) {
+
+    .navigation__element {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 0.5rem;
+    }
+
+    .contact-info {
+        gap: 0.2rem;
     }
 }
