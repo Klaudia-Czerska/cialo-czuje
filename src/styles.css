@@ -544,6 +544,14 @@ footer {
         font-size: 1.2rem;
     }
 
+    .start__banner {
+        min-height: calc(100svh - 70px);
+    }
+
+    .start__banner div {
+        min-height: 100%;
+    }
+
     .start__banner-img4 {
         background: no-repeat url('../assets/51-mobile.jpg') center/cover;
     }
@@ -592,6 +600,14 @@ footer {
         width: 100%;
     }
 
+    footer {
+        min-height: 70px;
+    }
+
+    .footer-title {
+        margin-top: 1.5rem;
+    }
+
     @keyframes show-sidebar {
         0% {
             left: -600px;
@@ -611,6 +627,15 @@ footer {
             left: -600px;
         }
     }
+}
+
+@media screen and (width < 390px) {
+
+    .footer-title {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
 }
 
 @media screen and (height < 800px) and (orientation: landscape) {
