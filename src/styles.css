@@ -615,17 +615,25 @@ footer {
 
 @media screen and (height < 800px) and (orientation: landscape) {
 
+    body {
+        grid-template: "sidebar main" auto
+                       "sidebar footer" 100px / 1fr 7fr;
+    }
+
     .navigation {
         margin: 1rem 0.5rem;
     }
 
-    .navigation__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
     .navigation__element {
         margin-left: 2rem;
+    }
+
+    .contact-info {
+        margin-left: 0.5rem;
+    }
+
+    .contact-info__phone {
+        font-size: 1.2rem;
     }
 
     .social-media {
