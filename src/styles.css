@@ -85,14 +85,15 @@ body {
     cursor: pointer;
     display: flex;
     font-size: 2rem;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
-    margin-top: 3rem;
+    margin: 3rem 2rem 0 2rem;
 }
 
 .social-media__facebook,
 .social-media__instagram,
-.social-media__whatsapp {
+.social-media__whatsapp,
+.social-media__booksy {
     color: inherit;
     transition: color .2s ease;
 }
@@ -101,6 +102,20 @@ body {
 .social-media__instagram:hover,
 .social-media__whatsapp:hover {
     color: #D28E94;
+}
+
+.social-media__booksy-icon {
+    background-image: url('../assets/Booksy.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 2rem;
+    transition: background-image .2s ease;
+    width: 2rem;
+}
+
+.social-media__booksy-icon:hover {
+    background-image: url('../assets/Booksy-hover.png');
 }
 
 main {
@@ -456,6 +471,16 @@ main {
     margin-right: 1rem;
 }
 
+.contact__booksy-icon {
+    background-image: url('../assets/Booksy.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 1.1rem;
+    margin-right: 1rem;
+    width: 1.1rem;
+}
+
 .contact__social-media {
     color: #D28E94;
     text-decoration: none;
@@ -681,7 +706,7 @@ footer {
     }
 }
 
-@media screen and (height < 550px) and (orientation: landscape) {
+@media screen and (height < 590px) and (orientation: landscape) {
 
     .navigation__element {
         font-size: 1.2rem;
