@@ -37,11 +37,11 @@ body {
 }
 
 .navigation {
-    margin: 3rem 3.5rem;
+    margin: 3rem 2rem;
 }
 
 .navigation__list {
-    list-style: url('../assets/Vector\ 7.png')''
+    list-style: none;
 }
 
 .navigation__element {
@@ -678,9 +678,45 @@ footer {
         margin-left: 2rem;
     }
 
-    .contact-info {
+    /* .contact-info {
         margin-left: 0.5rem;
+    } */
+
+    .contact-info__phone {
+        font-size: 1.2rem;
     }
+
+    .social-media {
+        margin: 1rem;
+    }
+
+    footer {
+        min-height: 70px;
+    }
+
+    .footer-title {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (height < 800px) {
+
+    body {
+        grid-template: "main" auto
+                       "footer" 1fr / 1fr;
+    }
+    
+    .navigation {
+        margin: 1rem 0.5rem;
+    }
+
+    .navigation__element {
+        margin-left: 2rem;
+    }
+
+    /* .contact-info {
+        margin-left: 0.5rem;
+    } */
 
     .contact-info__phone {
         font-size: 1.2rem;
@@ -706,7 +742,7 @@ footer {
     }
 }
 
-@media screen and (height < 590px) and (orientation: landscape) {
+@media screen and (height < 590px) {
 
     .navigation__element {
         font-size: 1.2rem;
