@@ -163,7 +163,7 @@ main {
 
 .start__banner-img4 {
     animation: change-background 40s ease 30s infinite forwards;
-    background: no-repeat url('../assets/51.jpg') center/cover;
+    background: no-repeat url('../assets/51.webp') center/cover;
     opacity: 0;
 }
 
@@ -578,7 +578,7 @@ footer {
     }
 
     .start__banner-img4 {
-        background: no-repeat url('../assets/51-mobile.jpg') center/cover;
+        background: no-repeat url('../assets/51-mobile.webp') center/cover;
     }
 
     .start__expectations,
@@ -705,7 +705,7 @@ footer {
         grid-template: "main" auto
                        "footer" 1fr / 1fr;
     }
-    
+
     .navigation {
         margin: 1rem 0.5rem;
     }
