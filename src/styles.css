@@ -423,10 +423,41 @@ main {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    list-style: none;
     margin-top: 2rem;
 }
 
+.massages__preparation {
+    width: 70%;
+}
+
+.prices {
+    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    display: none;
+    gap: 1rem;
+    height: fit-content;
+    justify-items: center;
+    padding: 2rem 2rem 2rem 4rem;
+    text-align: center;
+}
+
+.prices__subtitle {
+    margin-top: 3rem;
+}
+
+.prices__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
 .massages__prices {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
     min-width: 30%;
 }
 
@@ -439,9 +470,6 @@ main {
     margin-top: 0.5rem;
 }
 
-.massages__preparation {
-    width: 70%;
-}
 
 .contact {
     background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
