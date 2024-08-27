@@ -559,7 +559,7 @@ footer {
 
 }
 
-@media screen and (width < 600px) {
+@media screen and (width < 700px) {
 
     body {
         grid-template: "main" auto

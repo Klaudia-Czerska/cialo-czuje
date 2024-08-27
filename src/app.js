@@ -44,7 +44,7 @@ NAV.forEach((button) => {
         })
         const section = document.querySelector(`.${button.id}`);
         section.style.display = 'grid';
-        if (window.innerWidth < 600) {
+        if (window.innerWidth < 700) {
             hideMobileSidebar();
         }
     })
