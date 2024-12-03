@@ -16,6 +16,58 @@ body {
                    "sidebar footer" 100px / 1fr 4fr;
 }
 
+.pop-up {
+    align-items: center;
+    background:#38211836;
+    display: flex;
+    height: 100svh;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+.pop-up-hide {
+    display: none;
+}
+
+.pop-up-content {
+    align-items: center;
+    background:#f3cfb9;
+    border-radius: 2rem;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+}
+
+.pop-up-content-slide {
+    animation: slide 0.5s ease forwards;
+}
+
+.pop-up-content-close {
+    align-items: center;
+    aspect-ratio: 1;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1.5rem;
+}
+
+.pop-up-content-close:hover {
+    background-color: #D28E94;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
 .sidebar {
     background: linear-gradient(#FFF 35%, #E6B596);
     grid-area: sidebar;
@@ -557,6 +609,15 @@ footer {
         opacity: 0;
     }
 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50rem);
+    }
 }
 
 @media screen and (width < 700px) {

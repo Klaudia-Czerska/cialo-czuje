@@ -1,10 +1,14 @@
-// showing sidebar on mobile
+// variables
 
 const menuButton = document.querySelector('.sidebar__mobile-menu');
 const sidebar = document.querySelector('.sidebar');
 const mainContent = document.querySelector('main');
 const footer = document.querySelector('footer');
+const popUp = document.querySelector('.pop-up');
+const popUpClose = document.querySelector('.pop-up-content-close');
+const popUpContent = document.querySelector('.pop-up-content');
 
+// showing sidebar on mobile
 
 const toggleMobileSidebar = () => {
     if (window.getComputedStyle(sidebar).getPropertyValue('left') === '-600px') {
@@ -50,3 +54,14 @@ NAV.forEach((button) => {
     })
 })
 
+// managing pop-up
+
+const hidePopUp = () => {
+    popUpContent.classList.add('pop-up-content-slide');
+    
+    setTimeout(() => {
+        popUp.classList.add('pop-up-hide');
+    }, 500);
+}
+
+popUpClose.addEventListener('click', hidePopUp);
