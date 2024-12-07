@@ -86,8 +86,13 @@ body {
     text-align: center;
 }
 
+.start__holiday-offer .start__title {
+    color: rgb(177, 0, 0);
+}
+
 .start__holiday-offer-image {
     border: 10px solid #d28e947a;
+    margin: 0 auto;
     margin-bottom: 2rem;
     width: min(800px, 100%);
 }
