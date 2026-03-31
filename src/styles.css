@@ -1,11 +1,35 @@
+:root {
+    --text-colour: #6f5955;
+    --text-colour2: #8db9b9;
+    --dark-background: #6f5955;
+    --medium-background: #f4efeb;
+    --light-background: white;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src:  url('../assets/fonts/TheSeasonsBold/The\ Seasons\ Bold.woff') format('woff'),
+        url('../assets/fonts/TheSeasonsBold/The\ Seasons\ Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Black Mango Regular';
+  src:  url('../assets/fonts/BlackMango/Black\ Mango.woff') format('woff'),
+        url('../assets/fonts/BlackMango/Black\ Mango.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body {
-    font-family: Inter, sans-serif;
+    font-family: 'The Seasons', serif;
     height: 100%;
     overflow-x: hidden;
 }
@@ -16,94 +40,14 @@ body {
                    "sidebar footer" 100px / 1fr 4fr;
 }
 
-.pop-up {
-    align-items: center;
-    background:#38211836;
-    display: flex;
-    height: 100svh;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-}
-
-.pop-up-hide {
-    display: none;
-}
-
-.pop-up-content {
-    align-items: center;
-    background:#f3cfb9;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 70%;
-}
-
-.pop-up-content-slide {
-    animation: slide 0.5s ease forwards;
-}
-
-.pop-up-content-close {
-    align-items: center;
-    aspect-ratio: 1;
-    border: none;
-    background-color: transparent;
-    color: white;
-    display: flex;
-    font-size: 1rem;
-    justify-content: center;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    width: 1.5rem;
-}
-
-.pop-up-content-close:hover {
-    background-color: #D28E94;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.pop-up-content-info {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
-}
-
-.pop-up-content-info img {
-    border-radius: 2rem;
-    height: auto;
-    max-width: 100%;
-}
-
-.start__holiday-offer {
-    text-align: center;
-}
-
-.start__holiday-offer .start__title {
-    color: rgb(177, 0, 0);
-}
-
-.start__holiday-offer-image {
-    border: 10px solid #d28e947a;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    width: min(800px, 100%);
-}
 .sidebar {
-    background: linear-gradient(#FFF 35%, #E6B596);
+    background: linear-gradient(var(--light-background) 35%, var(--medium-background));
     grid-area: sidebar;
     z-index: 2;
 }
 
 .sidebar__mobile-menu {
-    color: #382118;
+    color: var(--text-colour);
     font-size: 2rem;
     margin-top: 1rem;
     margin-left: 1rem;
@@ -125,7 +69,7 @@ body {
 }
 
 .navigation__element {
-    color: #382118;
+    color: var(--text-colour);
     font-size: 1.5rem;
     margin-top: 1rem;
     transition: font-weight 0.3s ease;
@@ -140,7 +84,7 @@ body {
 }
 
 .navigation__radio:checked ~ label {
-    color: #D28E94;
+    color: var(--text-colour2);
     font-weight: 700;
 }
 
@@ -149,7 +93,7 @@ body {
 }
 
 .contact-info {
-    color: #382118;
+    color: var(--text-colour);
     display: grid;
     gap: 0.5rem;
     margin-left: 2rem;
@@ -161,7 +105,7 @@ body {
 }
 
 .social-media {
-    color: #382118;
+    color: var(--text-colour);
     cursor: pointer;
     display: flex;
     font-size: 2rem;
@@ -181,7 +125,7 @@ body {
 .social-media__facebook:hover,
 .social-media__instagram:hover,
 .social-media__whatsapp:hover {
-    color: #D28E94;
+    color: var(--text-colour2);
 }
 
 .social-media__booksy-icon {
@@ -205,7 +149,7 @@ main {
 }
 
 .start {
-    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    background: linear-gradient(45deg, var(--light-background) 35%, var(--medium-background));
     padding-bottom: 5rem;
 }
 
@@ -248,21 +192,21 @@ main {
 }
 
 .start__text {
-    color: #382118;
+    color: var(--text-colour);
     display: grid;
     gap: 3rem;
     margin: 4rem;
 }
 
 .start__text h1 {
-    color: #382118;
+    color: var(--text-colour);
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .start__text h2 {
-    color: #382118;
+    color: var(--text-colour);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -277,7 +221,7 @@ main {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Birthstone Bounce';
+    font-family: 'Black Mango Regular';
     font-size: 2rem;
     font-weight: 500;
     gap: 2rem;
@@ -287,7 +231,7 @@ main {
 }
 
 .start__massages-list-item {
-    border: solid 1px #D28E94;
+    border: solid 1px var(--text-colour2);
     border-radius: 0.5rem;
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -299,8 +243,8 @@ main {
 }
 
 .start__massages-list-item:hover {
-    background-color: #D28E94;
-    color: #FFF;
+    background-color: var(--text-colour2);
+    color: var(--light-background);
 }
 
 .start__expectations-info {
@@ -315,7 +259,7 @@ main {
 }
 
 .start__expectations-video {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     width: min(500px, 100%);
 }
 
@@ -337,7 +281,7 @@ main {
 }
 
 .start__holistic-image {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     width: min(800px, 100%);
 }
 
@@ -355,7 +299,7 @@ main {
 }
 
 .start__preparation-image {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     width: min(800px, 100%);
 }
 
@@ -366,7 +310,7 @@ main {
 }
 
 .start__vouchers-image {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     margin-top: 1rem;
     width: min(400px, 100%);
 }
@@ -377,13 +321,13 @@ main {
 }
 
 .start__products-image {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     margin-top: 1rem;
     width: min(800px, 100%);
 }
 
 .about-me {
-    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    background: linear-gradient(45deg, var(--light-background) 35%, var(--medium-background));
     display: none;
     gap: 3rem;
     grid-template-columns: 2fr 3fr;
@@ -409,7 +353,7 @@ main {
 }
 
 .about-me__portrait {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     width: min(300px, 100%);
 }
 
@@ -419,7 +363,7 @@ main {
 }
 
 .gallery {
-    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    background: linear-gradient(45deg, var(--light-background) 35%, var(--medium-background));
     display: none;
     padding: 2rem 2rem 2rem 4rem;
 }
@@ -447,18 +391,18 @@ main {
 }
 
 .gallery__image {
-    border: 10px solid #d28e947a;
+    border: 10px solid var(--text-colour2);
     transition: border 0.3s ease;
     width: clamp(100px, 100%, 400px);
 }
 
 .gallery__image:hover {
-    border: 10px solid #E6B596;
+    border: 10px solid var(--medium-background);
     cursor: pointer;
 }
 
 .massages {
-    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    background: linear-gradient(45deg, var(--light-background) 35%, var(--medium-background));
     display: none;
     gap: 1rem;
     height: fit-content;
@@ -479,7 +423,7 @@ main {
 }
 
 .massages__name {
-    font-family: 'Birthstone Bounce';
+    font-family: 'Black Mango Regular';
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: 2px;
@@ -512,7 +456,7 @@ main {
 }
 
 .prices {
-    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    background: linear-gradient(45deg, var(--light-background) 35%, var(--medium-background));
     display: none;
     gap: 1rem;
     height: fit-content;
@@ -542,7 +486,7 @@ main {
 }
 
 .massages__prices li {
-    border: solid 1px #D28E94;
+    border: solid 1px var(--text-colour2);
     padding: 0.5rem;
 }
 
@@ -552,7 +496,7 @@ main {
 
 
 .contact {
-    background: linear-gradient(45deg, #fffdfc 35%, #ffdec9de);
+    background: linear-gradient(45deg, var(--light-background) 35%, var(--medium-background));
     display: none;
     height: fit-content;
     min-height: 100%;
@@ -564,7 +508,7 @@ main {
 }
 
 .contact__title {
-    color: #382118;
+    color: var(--text-colour);
     font-size: 2rem;
     font-weight: 500;
     margin-top: 1rem;
@@ -590,17 +534,17 @@ main {
 }
 
 .contact__social-media {
-    color: #D28E94;
+    color: var(--text-colour);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .contact__social-media:hover {
-    color: #E6B596;
+    color: var(--text-colour2);
 }
 
 footer {
-    background: #E6B596;
+    background: var(--medium-background);
     display: flex;
     grid-area: footer;
     justify-content: center;
@@ -608,7 +552,7 @@ footer {
 }
 
 .footer-title {
-    color: #382118;
+    color: var(--text-colour);
     font-size: 1rem;
     font-weight: 400;
     margin-top: 2rem;
@@ -637,15 +581,6 @@ footer {
         opacity: 0;
     }
 
-}
-
-@keyframes slide {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-70rem);
-    }
 }
 
 @media screen and (width < 700px) {
@@ -832,10 +767,6 @@ footer {
     .contact-info__phone {
         font-size: 1.3rem;
     }
-
-    .pop-up-content {
-        width: 80%;
-    }
 }
 
 @media screen and (height < 590px) {
@@ -859,15 +790,3 @@ footer {
         margin-top: 0.5rem;
     }
 }
-
-/* @media screen and (height < 800px) {
-    
-    .social-media {
-        font-size: 1.5rem;
-    }
-    
-    .social-media__booksy-icon {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-} */
