@@ -406,7 +406,7 @@ main {
     display: none;
     gap: 1rem;
     height: fit-content;
-    justify-content: space-between;
+    justify-content: center;
     justify-items: center;
     padding: 2rem 2rem 2rem 4rem;
     text-align: center;
@@ -440,6 +440,14 @@ main {
     display: flex;
     gap: 1rem;
     list-style: none;
+}
+
+.massages__list {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    list-style: circle;
+    margin-left: 1rem;
 }
 
 .massages__footer {
