@@ -650,6 +650,10 @@ footer {
         min-height: 100%;
     }
 
+    .start__banner-img3 {
+        background: no-repeat url('../assets/39-mobile.webp') center/cover;
+    }
+
     .start__banner-img4 {
         background: no-repeat url('../assets/51-mobile.webp') center/cover;
     }
